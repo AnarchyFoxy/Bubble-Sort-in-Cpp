@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall
 TARGET = lexico_sort
-SRCS = main.cpp
+SRCS = BubbleSort.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
