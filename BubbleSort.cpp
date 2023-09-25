@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-bool isLexicographicallyLess(const std::string& s1, const std::string& s2) {
+bool isbubblegraphicallyLess(const std::string& s1, const std::string& s2) {
     int len1 = s1.length();
     int len2 = s2.length();
     int i = 0;
@@ -19,14 +19,14 @@ bool isLexicographicallyLess(const std::string& s1, const std::string& s2) {
     return len1 < len2;
 }
 
-void lexicoSort(std::vector<std::string>& strings) {
+void bubbleSort(std::vector<std::string>& strings) {
     int n = strings.size();
 
     for (int i = 0; i < n - 1; i++) {
         int minIdx = i;
 
         for (int j = i + 1; j < n; j++) {
-            if (isLexicographicallyLess(strings[j], strings[minIdx])) {
+            if (isbubblegraphicallyLess(strings[j], strings[minIdx])) {
                 minIdx = j;
             }
         }
@@ -44,11 +44,11 @@ int main() {
     std::vector<std::string> strings4 = {"abcd", "abc", "abcde", "ab", "abcdef"};
     std::vector<std::string> strings5 = {"aaa", "aa", "aaaaa", "a", "aaaa"};
 
-    lexicoSort(strings1);
-    lexicoSort(strings2);
-    lexicoSort(strings3);
-    lexicoSort(strings4);
-    lexicoSort(strings5);
+    bubbleSort(strings1);
+    bubbleSort(strings2);
+    bubbleSort(strings3);
+    bubbleSort(strings4);
+    bubbleSort(strings5);
 
     std::cout << "Output 1: ";
     for (const std::string& s : strings1) {
